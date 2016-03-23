@@ -8,20 +8,6 @@ a {
   padding: 0px;
 }
 
-/* Cover */
-
-#cover {
-  display: inline-block;
-  margin: 0px 0px 50px 0px;
-  padding: 0px;
-  width: 100%;
-  height: 100%;
-  background-color: #f00;
-  background-position: center;
-  background-size: cover;
-  background-image: url('/images/citrus-sunset.jpg');
-}
-
 .title {
   font-size: 180px;
   text-align: center;
@@ -43,6 +29,9 @@ a {
   line-height: 100px;
 }
 
+#cover {
+  padding: 200px;
+}
 
 /* Drink Controls */
 #drinks {
@@ -63,15 +52,26 @@ a {
   width: 31%;
   margin: 10px;
   line-height: 0.9em;
-  background-color: #FF0000;
+  background-color: #FFF;
 }
 
 .drinkImage {
   display: inline-block;
   background-position: center;
   background-size: cover;
+  border: 5px solid #555;
   height: 100%;
   width: 100%;
+  -webkit-filter: brightness(50%);
+     -moz-filter: brightness(50%);
+      -ms-filter: brightness(50%);
+       -o-filter: brightness(50%);
+          filter: brightness(50%);
+ -webkit-opacity: 0.7;
+    -moz-opacity: 0.7;
+     -ms-opacity: 0.7;
+      -o-opacity: 0.7;
+         opacity: 0.7;
 }
 
 .drinkName {
@@ -115,10 +115,18 @@ a {
 }
 
 .selectedDrink {
-  /*border: 10px solid #FF0000 !important;*/
-  -webkit-filter: brightness(125%);
-  opacity: 0.7 !important;
+  border: 5px solid #FFF;
   visibility: visible;
+  -webkit-filter: brightness(1);
+     -moz-filter: brightness(1);
+      -ms-filter: brightness(1);
+       -o-filter: brightness(1);
+          filter: brightness(1);
+  -webkit-opacity: 0;
+     -moz-opacity: 0;
+      -ms-opacity: 0;
+       -o-opacity: 0;
+          opacity: 0;
 }
 
 
@@ -162,8 +170,9 @@ a {
   font-size: 48px;
   line-height: 150px;
   border-radius: 12px;
+  border: 5px solid #555;
   vertical-align: middle;
-  background-color: #c0392b;
+  background-color: #555;
 }
 
 .disabled {
@@ -172,15 +181,20 @@ a {
 
 .noselection {
   background-color: #888888 !important;
+  -webkit-opacity: 0.5;
+     -moz-opacity: 0.5;
+      -ms-opacity: 0.5;
+       -o-opacity: 0.5;
+          opacity: 0.5;
 }
 
 .selectedSize {
-  background-color: #FFCCCC !important;
+  border: 5px solid #FFF;
 }
 
 #make {
   display: inline-block;
-  background-color: #c0392b;
+  background-color: #555;
   text-align: left;
   margin: 20px 0px 70px 0px;
   padding: 0px;
@@ -229,13 +243,13 @@ a {
 }
 
 .mixers {
-  background-color: #FFDDDD;
+  background-color: #555;
   width: 100%;
   height: 42px;
   margin: 5px;
   font: 16px "AvenirNext-Regular", Helvetica, Arial, sans-serif;
   padding-left: 10px;
-  border: 0px solid #e74c3c;
+  border: 0px solid #555;
   border-radius: 5px;
   -webkit-appearance: none;
 }
@@ -288,7 +302,7 @@ a {
   height: 40px;
   width: 40px;
   border-radius: 5px;
-  background-color: #FFEEEE;
+  background-color: #555;
 }
 
 .singlePump {
@@ -307,7 +321,7 @@ a {
   padding: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: #FFEEEE;
+  background-color: #555;
 }
 
 
