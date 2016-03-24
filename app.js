@@ -35,6 +35,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', routes.index(Drink, Pump));
+app.get('/superSecretAdminPage', routes.superSecretAdminPage(Drink, Pump));
 app.get('/add', add.form(Drink));
 app.get('/edit', edit.show(Drink));
 //app.use('/users', users);
@@ -80,7 +81,7 @@ db.once('open', function () {
         ingredients: [ { label: "pump0", ingredient: "" } ]
       };
       Pump.create(pumps);
-    } 
+    }
   });
 });
 
