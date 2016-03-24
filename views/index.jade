@@ -16,6 +16,7 @@ block content
         h1.title Bar Mixvah
         h2.subtitle Automated Drink Mixing Robot
         div#pumps.row
+        if isAdmin
           div.floatingPumpButtons
             div#plusMinus
               div.pumpButton(ng-click="addPump()") +

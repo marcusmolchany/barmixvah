@@ -3,10 +3,26 @@ exports.index = function (Drink, Pump) {
   return function (req, res) {
     Drink.find({}, function (err, drinks) {
       Pump.find({}, function (err, pumps) {
-        res.render('index', { 
+        res.render('index', {
           title: "Bar Mixvah: The Automatic Bartender Robot" ,
           drinks: drinks,
-          pumps: pumps
+          pumps: pumps,
+          isAdmin: false
+        });
+      });
+    });
+  };
+};
+
+exports.superSecretAdminPage = function (Drink, Pump) {
+  return function (req, res) {
+    Drink.find({}, function (err, drinks) {
+      Pump.find({}, function (err, pumps) {
+        res.render('index', {
+          title: "Bar Mixvah: The Automatic Bartender Robot" ,
+          drinks: drinks,
+          pumps: pumps,
+          isAdmin: true
         });
       });
     });
@@ -15,7 +31,7 @@ exports.index = function (Drink, Pump) {
 
 exports.updatePump = function (Pump) {
   return function (req, res) {
-    Pump.findOneAndUpdate({ _id: req.body._id }, 
+    Pump.findOneAndUpdate({ _id: req.body._id },
       {
         ingredients: req.body.ingredients
       },
